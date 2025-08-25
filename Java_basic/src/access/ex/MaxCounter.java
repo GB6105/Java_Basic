@@ -2,22 +2,29 @@ package access.ex;
 
 public class MaxCounter {
     private int count = 0;
-    int max;
+    private int max;
 
-    MaxCounter(int max) {
+    public MaxCounter(int max) {
         this.max = max;
     }
 
-    int increment(){
-        if(count < max){
-            return count++;
-        }else{
+//    int increment(){
+//        if(count < max){
+//            return count++;
+//        }else{
+//            System.out.println("최대값을 초과할 수 없습니다.");
+//            return count;
+//        }
+//    }
+    public void increment() {
+        if(count >= max){
             System.out.println("최대값을 초과할 수 없습니다.");
-            return count;
+            return;
         }
+        count++;
     }
 
-    int getCount(){
+    public int getCount(){
         return count;
     }
 }
